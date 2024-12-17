@@ -72,7 +72,7 @@ MinimapIcon 2 Grey Circle
 # Quality
 Show
 Class Currency
-BaseType "Glassblower's Bauble" "Armourer's Scrap" "Blacksmith's Whitestone"
+BaseType "Glassblower's Bauble" "Armourer's Scrap" "Blacksmith's Whetstone"
 SetTextColor 255 107 54
 SetBorderColor 255 107 54
 SetBackgroundColor 80 70 60
