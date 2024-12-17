@@ -1,0 +1,117 @@
+#########################
+Loot filter for Path of exile 2
+#########################
+
+# Version: 0.0.1
+# Author: ews_taffy
+
+
+#---------------------
+# Уникальные предметы
+#---------------------
+
+Show
+Rarity Unique
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+SetFontSize 40
+
+#-------------------
+# Орбы
+#-------------------
+
+# S-tier
+Show
+Class "Currency"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+SetFontSize 50
+
+# A-tier
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism" "Orb of Annulment"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 40
+
+# B-tier
+Show
+Class "Currency"
+BaseType "Vaal Orb" "Greater Jeweller's Orb" "Lesser Jeweller's Orb" "Chaos Orb" "Exotic" "Exalted Orb" "Regal Orb" "Artificer's Orb" "Orb of Alchemy" "Orb of Chance"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+SetFontSize 35
+
+# C-tier
+Show
+Class Currency
+BaseType "Orb of Augmentation" "Orb of Transmutation"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+# Quality
+Show
+Class Currency
+BaseType "Glassblower's Bauble" "Armourer's Scrap" "Blacksmith's Whitestone"
+SetTextColor 255 107 54
+SetBorderColor 255 107 54
+SetBackgroundColor 80 70 60
+MinimapIcon 2 Grey Circle
+
+# Unknown currency
+Show
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
+
+
+#-------------------
+# Золото
+#### Золото будет подбираться при беге, но не будет отображаться меньше 300 в стаке чтобы не мешало
+#### Чтобы поменять размер стака от которого будет показываться
+#### меняй параметр StakSize
+#### если хочешь чтобы показывалось любое количество, удали блок Hide
+#### TODO: сделать зависимоть от уровня локации
+#-------------------
+
+Hide
+StakSize < 300
+BaseType == "Gold"
+
+Show
+StakSize >= 1000
+BaseType == "Gold"
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+PlayEffect Orange Temp
+
+Show
+BaseType == "Gold"
+SetTextColor 180 180 180
+SetBorderColor 0 0 0 180
+
+
